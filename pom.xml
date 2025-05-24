@@ -270,6 +270,11 @@
         <gephi.jsign.version>6.0</gephi.jsign.version>
 
         <gephi.checkstyle.version>10.17.0</gephi.checkstyle.version>
+
+        <!-- Añades las tuyas: -->
+    <sonar.projectKey>julen03:julen03_gephi</sonar.projectKey>
+    <sonar.organization>julen03</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
     
     <!-- Maven required version -->
@@ -808,6 +813,11 @@
         <!-- Plugins installed with versions -->
         <pluginManagement>
             <plugins>
+                 <plugin>
+                    <groupId>org.sonarsource.scanner.maven</groupId>
+                    <artifactId>sonar-maven-plugin</artifactId>
+                    <version>3.9.1.2184</version> <!-- o la última versión -->
+                </plugin>
                 <plugin>
                     <!-- 
                     Check new versions with:
