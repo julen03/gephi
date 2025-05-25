@@ -922,11 +922,7 @@
                     <artifactId>build-helper-maven-plugin</artifactId>
                     <version>${gephi.build-helper-maven-plugin.version}</version>
                 </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>${gephi.maven-surefire-plugin.version}</version>
-                </plugin>
+                
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-jarsigner-plugin</artifactId>
@@ -1107,6 +1103,11 @@
                     </goals>
                     </execution>
                 </executions>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>${gephi.maven-surefire-plugin.version}</version>
                 </plugin>
 
                 <!-- Surefire: engancha Jacoco a la ejecución de tests -->
