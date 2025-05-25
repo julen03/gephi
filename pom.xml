@@ -284,6 +284,7 @@
 
 <!-- Configuración JaCoCo -->
         <jacoco.version>0.8.8</jacoco.version>
+        <sonar.coverage.jacoco.xmlReportPaths>target/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
     </properties>
     
     <!-- Maven required version -->
