@@ -854,6 +854,15 @@
                             <phase>verify</phase>
                         </execution>
                     </executions>
+                    <configuration>
+                        <dataFile>target/jacoco.exec</dataFile>
+                        <outputDirectory>${project.build.directory}/site/jacoco</outputDirectory>
+                        <reports>
+                            <xml>true</xml>
+                            <html>true</html>
+                        </reports>
+                    </configuration>
+
                 </plugin>
                 <plugin>
                     <!-- 
@@ -1073,7 +1082,42 @@
                     </archive>
                 </configuration>
             </plugin>
-            
+            <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>${jacoco.version}</version>
+                    <executions>
+                        <execution>
+                            <id>prepare-agent</id>
+                            <goals>
+                                <goal>prepare-agent</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>report</id>
+                            <phase>verify</phase>
+                            <goals>
+                                <goal>report</goal>
+                            </goals>
+                        </execution>
+                        <execution>
+                            <id>report-aggregate</id>
+                            <goals>
+                                <goal>report-aggregate</goal>
+                            </goals>
+                            <phase>verify</phase>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <dataFile>target/jacoco.exec</dataFile>
+                        <outputDirectory>${project.build.directory}/site/jacoco</outputDirectory>
+                        <reports>
+                            <xml>true</xml>
+                            <html>true</html>
+                        </reports>
+                    </configuration>
+
+                </plugin>
             <!-- NBM options -->
             <plugin>
                 <groupId>org.apache.netbeans.utilities</groupId>
